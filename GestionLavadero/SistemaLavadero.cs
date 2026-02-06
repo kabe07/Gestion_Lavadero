@@ -49,6 +49,11 @@ namespace GestionLavadero
             turnos.Add(turno);
 
         }
+        public void AgregarV(string marca,string modelo, TipoVehiculo tipo, Cliente cliente)
+        {
+            cliente.AgregarVehiculo(marca, modelo, tipo);
+            
+        }
         public List<Servicio> ObtenerServicios()
         {
             return servicios;
