@@ -24,7 +24,10 @@ namespace GestionLavadero
         {
             precios[tipovehiculo] = precio;
         }
-
+        public override string ToString()
+        {
+            return $"{tipo.ToString()}";
+        }
     
     }
 }

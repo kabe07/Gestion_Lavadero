@@ -29,9 +29,9 @@ namespace GestionLavadero
         {
             return vehiculos;
         }
-        public string ToString()
+        public override string ToString()
         {
-            return $"Cliente nombre:{Nombre}-Dni:{Dni}";
+            return $"{Nombre}-{Dni}";
         }
 
     }

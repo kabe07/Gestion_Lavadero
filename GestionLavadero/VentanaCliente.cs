@@ -16,5 +16,10 @@ namespace GestionLavadero
         {
             InitializeComponent();
         }
+
+        private void VentanaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,16 +10,16 @@ namespace GestionLavadero
     {
         private string marca;
         private string modelo;
-        public TipoVehiculo tipo;
+        public TipoVehiculo Tipo;
         public Vehiculo(string marca, string modelo, TipoVehiculo tipo)
         {
             this.marca = marca;
             this.modelo = modelo;
-            this.tipo = tipo;
+            this.Tipo = tipo;
         }
         public string ToString()
         {
-            return $"Vehiculo marca:{marca}-modelo:{modelo}-tipo:{tipo}";
+            return $"Vehiculo marca:{marca}-modelo:{modelo}-tipo:{Tipo}";
         }
     }
 }

@@ -56,9 +56,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicio.cs" />
+    <Compile Include="SistemaLavadero.cs" />
     <Compile Include="TipoServicio.cs" />
     <Compile Include="TipoVehiculo.cs" />
+    <Compile Include="Turno.cs" />
     <Compile Include="Vehiculo.cs" />
+    <Compile Include="VentanaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCliente.Designer.cs">
+      <DependentUpon>VentanaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaVehiculo.Designer.cs">
+      <DependentUpon>VentanaVehiculo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +85,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaCliente.resx">
+      <DependentUpon>VentanaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaVehiculo.resx">
+      <DependentUpon>VentanaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
