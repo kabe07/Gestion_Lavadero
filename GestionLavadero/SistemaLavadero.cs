@@ -10,6 +10,7 @@ namespace GestionLavadero
     {
         private List<Servicio> servicios;
         private List<Turno> turnos;
+        private List<Cliente> clientes;
         public SistemaLavadero()
         { }
         public void InicializarServicios()
@@ -55,6 +56,10 @@ namespace GestionLavadero
         public List<Turno> ObtenerTurnos()
         {
             return turnos;
+        }
+        public List<Cliente> ObtenerClientes()
+        {
+            return clientes;
         }
 
     }
