@@ -59,7 +59,10 @@ namespace GestionLavadero
             if (ventana3.ShowDialog()==DialogResult.OK)
             {
                 Cliente clienteseleccionado = ventana3.cbcliente.SelectedItem as Cliente;
-
+                string marca = ventana3.tbmarca.Text;
+                string modelo = ventana3.tbmodelo.Text;
+                TipoVehiculo tipo = (TipoVehiculo)ventana3.cbtipo.SelectedItem;
+                sistema.AgregarV(marca, modelo, tipo,clienteseleccionado);
                 
             }
         }

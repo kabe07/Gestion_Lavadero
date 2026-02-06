@@ -16,5 +16,15 @@ namespace GestionLavadero
         {
             InitializeComponent();
         }
+
+        private void VentanaVehiculo_Load(object sender, EventArgs e)
+        {
+            cbtipo.DataSource = Enum.GetValues(typeof(TipoVehiculo));
+        }
+
+        private void cbcliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
