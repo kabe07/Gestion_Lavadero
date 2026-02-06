@@ -57,6 +57,11 @@ namespace GestionLavadero
         {
             return turnos;
         }
+        public void CrearClientes(string nombre,int dni)
+        {
+            Cliente cliente = new Cliente(nombre, dni);
+            clientes.Add(cliente);
+        }
         public List<Cliente> ObtenerClientes()
         {
             return clientes;
