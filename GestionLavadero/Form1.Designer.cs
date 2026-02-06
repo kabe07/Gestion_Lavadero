@@ -138,6 +138,8 @@
             // 
             // dtp
             // 
+            this.dtp.CustomFormat = "dd:MM:yyyy HH:mm";
+            this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp.Location = new System.Drawing.Point(251, 90);
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(121, 20);
