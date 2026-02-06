@@ -16,10 +16,18 @@ namespace GestionLavadero
         {
             InitializeComponent();
         }
-
+        SistemaLavadero sistema = new SistemaLavadero();
         private void Form1_Load(object sender, EventArgs e)
         {
+            sistema.InicializarServicios();
+            List<Servicio> ser = sistema.ObtenerServicios();
+            cbservicio.DataSource = ser;
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
