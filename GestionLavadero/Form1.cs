@@ -20,7 +20,7 @@ namespace GestionLavadero
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            sistema.InicializarServicios();
+            
             List<Servicio> ser = sistema.ObtenerServicios();
             cbservicio.DataSource = ser;
             List<Cliente> clientes = sistema.ObtenerClientes();
@@ -34,6 +34,7 @@ namespace GestionLavadero
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Cliente cliente = cbclientes.SelectedItem as Cliente;
 
         }
 

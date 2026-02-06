@@ -12,7 +12,12 @@ namespace GestionLavadero
         private List<Turno> turnos;
         private List<Cliente> clientes;
         public SistemaLavadero()
-        { }
+        {
+            servicios = new List<Servicio>();
+            turnos = new List<Turno>();
+            clientes = new List<Cliente>();
+            InicializarServicios();
+        }
         public void InicializarServicios()
         {
             Servicio lavado = new Servicio(TipoServicio.Lavado_comun);
@@ -53,6 +58,10 @@ namespace GestionLavadero
         {
             cliente.AgregarVehiculo(marca, modelo, tipo);
             
+        }
+        public List<Vehiculo> MostrarListaVehiculos(Cliente cliente)
+        {
+            return cliente.MostrarVehiculos();
         }
         public List<Servicio> ObtenerServicios()
         {

@@ -25,6 +25,10 @@ namespace GestionLavadero
             Vehiculo vehiculo = new Vehiculo(marca, modelo, tipo);
             vehiculos.Add(vehiculo);
         }
+        public List<Vehiculo> MostrarVehiculos()
+        {
+            return vehiculos;
+        }
         public string ToString()
         {
             return $"Cliente nombre:{Nombre}-Dni:{Dni}";
