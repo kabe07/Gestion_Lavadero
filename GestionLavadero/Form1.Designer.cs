@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.cbclientes = new System.Windows.Forms.ComboBox();
             this.cbservicio = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbvehiculos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,13 +83,13 @@
             this.cbservicio.TabIndex = 3;
             this.cbservicio.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cbvehiculos
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(251, 38);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 4;
+            this.cbvehiculos.FormattingEnabled = true;
+            this.cbvehiculos.Location = new System.Drawing.Point(251, 38);
+            this.cbvehiculos.Name = "cbvehiculos";
+            this.cbvehiculos.Size = new System.Drawing.Size(121, 21);
+            this.cbvehiculos.TabIndex = 4;
             // 
             // label1
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbvehiculos);
             this.Controls.Add(this.cbservicio);
             this.Controls.Add(this.cbclientes);
             this.Controls.Add(this.button2);
@@ -210,7 +210,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbclientes;
         private System.Windows.Forms.ComboBox cbservicio;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbvehiculos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
