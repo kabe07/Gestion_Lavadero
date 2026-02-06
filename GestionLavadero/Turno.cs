@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionLavadero
 {
-    internal class Turno
+    internal class Turno: IComparable<Turno>
     {
         private DateTime fechayhora;
         private Vehiculo vehiculo;
@@ -26,6 +26,10 @@ namespace GestionLavadero
         public override string ToString()
         {
             return $"{fechayhora}-{vehiculo.ToString()}-{servicio.ToString()}";
+        }
+        public int CompareTo(Turno otro)
+        {
+            return this.fechayhora.CompareTo(otro.fechayhora);
         }
     }
 }

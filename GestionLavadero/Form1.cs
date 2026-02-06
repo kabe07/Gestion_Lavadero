@@ -78,7 +78,9 @@ namespace GestionLavadero
             Servicio servicio = cbservicio.SelectedItem as Servicio;
             sistema.CrearTurno(fecha, vehiculo, servicio);
             lbturnos.DataSource = null;
-            lbturnos.DataSource = sistema.ObtenerTurnos();
+            List<Turno>turnos = sistema.ObtenerTurnos();
+            turnos.Sort();
+            lbturnos.DataSource = turnos;
         }
     }
 }
