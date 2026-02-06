@@ -17,9 +17,9 @@ namespace GestionLavadero
             this.modelo = modelo;
             this.Tipo = tipo;
         }
-        public string ToString()
+        public override string ToString()
         {
-            return $"Vehiculo marca:{marca}-modelo:{modelo}-tipo:{Tipo}";
+            return $"{marca}-{modelo}";
         }
     }
 }

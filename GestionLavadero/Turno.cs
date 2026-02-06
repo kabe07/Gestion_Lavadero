@@ -23,9 +23,9 @@ namespace GestionLavadero
         {
             return servicio.ObtenerPrecioBase(vehiculo.Tipo);
         }
-        public string ToString()
+        public override string ToString()
         {
-            return $"Servicio fecha:{fechayhora} vehiculo:{vehiculo.ToString()} servicio:{servicio.ToString()}";
+            return $"{fechayhora}-{vehiculo.ToString()}-{servicio.ToString()}";
         }
     }
 }
