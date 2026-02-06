@@ -50,5 +50,18 @@ namespace GestionLavadero
                 cbclientes.DataSource = clientes;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VentanaVehiculo ventana3 = new VentanaVehiculo();
+            List<Cliente> clientes = sistema.ObtenerClientes();
+            ventana3.cbcliente.DataSource = clientes;
+            if (ventana3.ShowDialog()==DialogResult.OK)
+            {
+                Cliente clienteseleccionado = ventana3.cbcliente.SelectedItem as Cliente;
+
+                
+            }
+        }
     }
 }
