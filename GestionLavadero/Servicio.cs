@@ -10,16 +10,21 @@ namespace GestionLavadero
     {
         private TipoServicio tipo;
         private Dictionary<TipoVehiculo, double> precios;
-        public Servicio(TipoServicio tipo, Dictionary<TipoVehiculo,double> precios)
+        public Servicio(TipoServicio tipo)
         {
             this.tipo = tipo;
-            this.precios = precios;
+            this.precios = precios = new Dictionary<TipoVehiculo, double>();
 
         }
         public double ObtenerPrecioBase(TipoVehiculo tipo)
         {
             return precios[tipo];
         }
+        public void AgregarPrecio(TipoVehiculo tipovehiculo,double precio)
+        {
+            precios[tipovehiculo] = precio;
+        }
+
     
     }
 }
