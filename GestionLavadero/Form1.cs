@@ -70,5 +70,15 @@ namespace GestionLavadero
                 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DateTime fecha = dtp.Value;
+            Vehiculo vehiculo = cbvehiculos.SelectedItem as Vehiculo;
+            Servicio servicio = cbservicio.SelectedItem as Servicio;
+            sistema.CrearTurno(fecha, vehiculo, servicio);
+            lbturnos.DataSource = null;
+            lbturnos.DataSource = sistema.ObtenerTurnos();
+        }
     }
 }

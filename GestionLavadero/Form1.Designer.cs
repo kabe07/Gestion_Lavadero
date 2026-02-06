@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbturnos = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -118,13 +118,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Elegir vehiculo";
             // 
-            // listBox1
+            // lbturnos
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 129);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(497, 186);
-            this.listBox1.TabIndex = 8;
+            this.lbturnos.FormattingEnabled = true;
+            this.lbturnos.Location = new System.Drawing.Point(12, 129);
+            this.lbturnos.Name = "lbturnos";
+            this.lbturnos.Size = new System.Drawing.Size(497, 186);
+            this.lbturnos.TabIndex = 8;
             // 
             // button3
             // 
@@ -134,13 +134,14 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Crear Turno";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dateTimePicker1
+            // dtp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(251, 90);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtp.Location = new System.Drawing.Point(251, 90);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(121, 20);
+            this.dtp.TabIndex = 10;
             // 
             // label4
             // 
@@ -185,9 +186,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbturnos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,9 +215,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbturnos;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
