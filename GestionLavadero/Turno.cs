@@ -25,7 +25,8 @@ namespace GestionLavadero
         }
         public override string ToString()
         {
-            return $"{fechayhora}-{vehiculo.ToString()}-{servicio.ToString()}";
+            double precio = CalcularPrecioFinal();
+            return $"{fechayhora}-{vehiculo.ToString()}-{servicio.ToString()}-{precio}";
         }
         public int CompareTo(Turno otro)
         {
