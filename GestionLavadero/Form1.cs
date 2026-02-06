@@ -92,6 +92,9 @@ namespace GestionLavadero
             lbturnos.DataSource = sistema.ObtenerTurnos();
             lblavados.DataSource = null;
             lblavados.DataSource = sistema.ObtenerTurnosLavados();
+            double facturacion = Convert.ToDouble(tbfacturacion.Text);
+            double total=sistema.Facturacion(facturacion);
+            tb2.Text = total.ToString();
         }
     }
 }

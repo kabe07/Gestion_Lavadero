@@ -42,10 +42,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbfacturacion = new System.Windows.Forms.TextBox();
             this.lblavados = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -176,12 +176,12 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Facturacion:";
             // 
-            // textBox1
+            // tbfacturacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 340);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
+            this.tbfacturacion.Location = new System.Drawing.Point(261, 340);
+            this.tbfacturacion.Name = "tbfacturacion";
+            this.tbfacturacion.Size = new System.Drawing.Size(100, 20);
+            this.tbfacturacion.TabIndex = 14;
             // 
             // lblavados
             // 
@@ -200,22 +200,22 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Vehiculos lavados";
             // 
-            // textBox2
+            // tb2
             // 
-            this.textBox2.Location = new System.Drawing.Point(192, 387);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
+            this.tb2.Location = new System.Drawing.Point(192, 387);
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(100, 20);
+            this.tb2.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblavados);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbfacturacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
@@ -254,10 +254,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbfacturacion;
         private System.Windows.Forms.ListBox lblavados;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb2;
     }
 }
 

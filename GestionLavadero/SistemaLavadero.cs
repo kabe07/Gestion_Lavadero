@@ -12,6 +12,12 @@ namespace GestionLavadero
         private List<Turno> turnos;
         private List<Turno> turnosyalavados;
         private List<Cliente> clientes;
+        private double facturacionacumulada = 0;
+        
+        public double Facturacion(double facturacion)
+        {
+            return facturacionacumulada=facturacionacumulada + facturacion;
+        }
         public SistemaLavadero()
         {
             turnosyalavados = new List<Turno>();
@@ -20,6 +26,7 @@ namespace GestionLavadero
             clientes = new List<Cliente>();
             InicializarServicios();
         }
+        
         public void InicializarServicios()
         {
             Servicio lavado = new Servicio(TipoServicio.Lavado_comun);
