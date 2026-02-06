@@ -82,5 +82,16 @@ namespace GestionLavadero
             turnos.Sort();
             lbturnos.DataSource = turnos;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Turno turno = lbturnos.SelectedItem as Turno;
+            sistema.EliminarTurno(turno);
+            sistema.AgregarTurno(turno);
+            lbturnos.DataSource = null;
+            lbturnos.DataSource = sistema.ObtenerTurnos();
+            lblavados.DataSource = null;
+            lblavados.DataSource = sistema.ObtenerTurnosLavados();
+        }
     }
 }

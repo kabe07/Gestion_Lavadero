@@ -43,6 +43,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblavados = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -162,6 +165,7 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "Cobrar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label5
             // 
@@ -179,11 +183,38 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 14;
             // 
+            // lblavados
+            // 
+            this.lblavados.FormattingEnabled = true;
+            this.lblavados.Location = new System.Drawing.Point(535, 52);
+            this.lblavados.Name = "lblavados";
+            this.lblavados.Size = new System.Drawing.Size(253, 355);
+            this.lblavados.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(532, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Vehiculos lavados";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(192, 387);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblavados);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
@@ -224,6 +255,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox lblavados;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

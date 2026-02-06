@@ -10,9 +10,11 @@ namespace GestionLavadero
     {
         private List<Servicio> servicios;
         private List<Turno> turnos;
+        private List<Turno> turnosyalavados;
         private List<Cliente> clientes;
         public SistemaLavadero()
         {
+            turnosyalavados = new List<Turno>();
             servicios = new List<Servicio>();
             turnos = new List<Turno>();
             clientes = new List<Cliente>();
@@ -79,6 +81,19 @@ namespace GestionLavadero
         public List<Cliente> ObtenerClientes()
         {
             return clientes;
+        }
+        public void EliminarTurno(Turno turno)
+        {
+            turnos.Remove(turno);
+        }
+        public void AgregarTurno(Turno turno)
+        {
+            turnosyalavados.Add(turno);
+
+        }
+        public List<Turno> ObtenerTurnosLavados()
+        {
+            return turnosyalavados;
         }
 
     }
