@@ -39,6 +39,11 @@ namespace GestionLavadero
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cliente cliente = cbclientes.SelectedItem as Cliente;
+            if (cliente == null)
+            {
+                cbvehiculos.DataSource = null;
+                return;
+            }
             List<Vehiculo> lista=sistema.MostrarListaVehiculos(cliente);
             cbvehiculos.DataSource = null;
             cbvehiculos.DataSource = lista;

@@ -71,7 +71,6 @@
             // 
             // btagregar
             // 
-            this.btagregar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btagregar.Location = new System.Drawing.Point(25, 147);
             this.btagregar.Name = "btagregar";
             this.btagregar.Size = new System.Drawing.Size(75, 23);
