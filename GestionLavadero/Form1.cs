@@ -47,7 +47,7 @@ namespace GestionLavadero
             if(ventana2.ShowDialog()==DialogResult.OK)
             {
                 string nombre = ventana2.tbnombre.Text;
-                int dni = Convert.ToInt32(ventana2.tbdni.Text);
+                int dni = ventana2.Dni;
                 sistema.CrearClientes(nombre, dni);
                 cbclientes.DataSource = null;
                 List<Cliente> clientes = sistema.ObtenerClientes();
@@ -86,15 +86,26 @@ namespace GestionLavadero
         private void button4_Click(object sender, EventArgs e)
         {
             Turno turno = lbturnos.SelectedItem as Turno;
+            if(turno==null)
+            {
+                MessageBox.Show("Debe seleccionar un turno");
+                return;
+            }
+            bool ok = double.TryParse(tbfacturacion.Text, out double facturacion);
+            if (!ok)
+            {
+                MessageBox.Show("Ingrese un precio valido");
+                return;
+            }
             sistema.EliminarTurno(turno);
             sistema.AgregarTurno(turno);
             lbturnos.DataSource = null;
             lbturnos.DataSource = sistema.ObtenerTurnos();
             lblavados.DataSource = null;
             lblavados.DataSource = sistema.ObtenerTurnosLavados();
-            double facturacion = Convert.ToDouble(tbfacturacion.Text);
+           
             double total=sistema.Facturacion(facturacion);
-            tb2.Text = total.ToString();
+            tb2.Text = total.ToString("0.00");
         }
     }
 }
