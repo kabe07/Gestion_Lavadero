@@ -21,5 +21,23 @@ namespace GestionLavadero
         {
 
         }
+
+        private void tbdni_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        public int Dni { get; set; }
+        private void btagregar_Click(object sender, EventArgs e)
+        {
+            bool vof = int.TryParse(tbdni.Text, out int dni);
+            if (!vof || dni < 1000000 || dni > 99000000)
+            {
+                MessageBox.Show("Ingrese un numero valido porfavor");
+                return;
+            }
+            Dni = dni;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

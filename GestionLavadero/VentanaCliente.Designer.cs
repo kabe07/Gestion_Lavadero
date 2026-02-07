@@ -49,6 +49,7 @@
             this.tbdni.Name = "tbdni";
             this.tbdni.Size = new System.Drawing.Size(100, 20);
             this.tbdni.TabIndex = 1;
+            this.tbdni.TextChanged += new System.EventHandler(this.tbdni_TextChanged);
             // 
             // label1
             // 
@@ -77,6 +78,7 @@
             this.btagregar.TabIndex = 4;
             this.btagregar.Text = "Agregar";
             this.btagregar.UseVisualStyleBackColor = true;
+            this.btagregar.Click += new System.EventHandler(this.btagregar_Click);
             // 
             // btcancelar
             // 
