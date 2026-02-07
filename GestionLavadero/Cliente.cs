@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace GestionLavadero
 {
+    [Serializable]
     internal class Cliente
     {
         private string nombre;

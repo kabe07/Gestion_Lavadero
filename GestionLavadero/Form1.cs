@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GestionLavadero
 {
@@ -20,10 +22,12 @@ namespace GestionLavadero
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            sistema = SistemaLavadero.Cargar("lavadero.dat");    
             List<Servicio> ser = sistema.ObtenerServicios();
+            cbservicio.DataSource = null;
             cbservicio.DataSource = ser;
             List<Cliente> clientes = sistema.ObtenerClientes();
+            cbclientes.DataSource = null;
             cbclientes.DataSource = clientes;
         }
 
@@ -106,6 +110,17 @@ namespace GestionLavadero
            
             double total=sistema.Facturacion(facturacion);
             tb2.Text = total.ToString("0.00");
+        }
+
+        private void btsalir_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SistemaLavadero.Guardar("lavadero.dat", sistema);
         }
     }
 }

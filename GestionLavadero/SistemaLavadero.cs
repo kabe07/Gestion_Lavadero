@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 namespace GestionLavadero
 {
+    [Serializable]
     internal class SistemaLavadero
     {
         private List<Servicio> servicios;
@@ -101,6 +103,25 @@ namespace GestionLavadero
         public List<Turno> ObtenerTurnosLavados()
         {
             return turnosyalavados;
+        }
+        public static void Guardar(string ruta, SistemaLavadero sistema)
+        {
+            FileStream fs = new FileStream(ruta, FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, sistema);
+            fs.Close();
+        }
+        public static SistemaLavadero Cargar(string ruta)
+        {
+            if(!File.Exists(ruta))
+            {
+                return new SistemaLavadero();
+            }
+            FileStream fs = new FileStream(ruta, FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            SistemaLavadero sistema = (SistemaLavadero)bf.Deserialize(fs);
+            fs.Close();
+            return sistema;
         }
 
     }

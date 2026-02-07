@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionLavadero
 {
+    [Serializable]
     internal class Servicio
     {
         private TipoServicio tipo;

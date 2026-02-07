@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionLavadero
 {
+    [Serializable]
     public enum TipoServicio
     {
         Lavado_comun,
