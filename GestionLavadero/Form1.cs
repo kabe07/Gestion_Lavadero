@@ -29,6 +29,13 @@ namespace GestionLavadero
             List<Cliente> clientes = sistema.ObtenerClientes();
             cbclientes.DataSource = null;
             cbclientes.DataSource = clientes;
+            lbturnos.DataSource = null;
+            lbturnos.DataSource = sistema.ObtenerTurnos();
+            lblavados.DataSource = null;
+            lblavados.DataSource = sistema.ObtenerTurnosLavados();
+            double total = sistema.Facturacion2();
+            tb2.Text = total.ToString("0.00");
+            
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,7 +123,7 @@ namespace GestionLavadero
             double total=sistema.Facturacion(facturacion);
             tb2.Text = total.ToString("0.00");
         }
-
+        
         private void btsalir_Click(object sender, EventArgs e)
         {
             
