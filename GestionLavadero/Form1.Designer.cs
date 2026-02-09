@@ -46,7 +46,6 @@
             this.lblavados = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tb2 = new System.Windows.Forms.TextBox();
-            this.btsalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -208,22 +207,11 @@
             this.tb2.Size = new System.Drawing.Size(100, 20);
             this.tb2.TabIndex = 17;
             // 
-            // btsalir
-            // 
-            this.btsalir.Location = new System.Drawing.Point(535, 415);
-            this.btsalir.Name = "btsalir";
-            this.btsalir.Size = new System.Drawing.Size(253, 23);
-            this.btsalir.TabIndex = 18;
-            this.btsalir.Text = "Salir";
-            this.btsalir.UseVisualStyleBackColor = true;
-            this.btsalir.Click += new System.EventHandler(this.btsalir_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btsalir);
             this.Controls.Add(this.tb2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblavados);
@@ -271,7 +259,6 @@
         private System.Windows.Forms.ListBox lblavados;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb2;
-        private System.Windows.Forms.Button btsalir;
     }
 }
 
